@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@700&display=swap');
+
+
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading-stats: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--main-background);
+}
+
+.continar {
+    width: 80%;
+    height: 500px;
+    margin: 60px auto;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.continar .info {
+    width: 48%;
+    padding-left: 50px;
+}
+
+.continar .info h1 {
+    color: var(--main-heading-stats);
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.continar .info span {
+    color: var(--accent);
+}
+
+.continar .info p {
+    color: var(--main-paragraph);
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.continar .info .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.continar .info .box .card h2 {
+    color: var(--main-heading-stats);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.continar .info .box .card p {
+    text-transform: uppercase;
+}
+
+.continar .image {
+    width: 48%;
+    height: 100%;
+    background: url(./images/image-header-desktop.jpg) center center/cover no-repeat;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.continar .image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: hsl(277deg 64% 61% / 59%);
+}
+
+
+@media (max-width: 767px) {
+    .continar {
+        width: 50%;
+        flex-direction: column-reverse;
+        height: 90vh;
+        margin: 25px auto;
+    }
+
+    .continar .image {
+        width: 100%;
+        height: 35%;
+        background-image: url(./images/image-header-mobile.jpg);
+        border-radius: 10px;
+    }
+
+
+    .continar .info {
+        width: 90%;
+        height: 60%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .continar .info .box {
+        flex-direction: column;
+    }
+}
